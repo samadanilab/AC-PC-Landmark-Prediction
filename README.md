@@ -7,7 +7,9 @@ As this framework was originally developed using data from the Dept. of Veterans
 ## Data Requirements
 
 ## System and Add-on Requirements
-The coarse-localization guide for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (https://github.com/Slicer/SlicerJupyter). We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). 
+The coarse-localization guide for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (https://github.com/Slicer/SlicerJupyter). The jupyter notebook with our code is provided in this repo, with a 'preprocessing_README' that contains specific instructions for image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer are required: 
+1. SlicerJupyter
+2. SlicerNeuro 
 
 Our framework was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
 CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache; Cores: 10 Cores / 20 Threads; Memory: 32GB
