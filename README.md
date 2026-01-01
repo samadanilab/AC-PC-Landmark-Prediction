@@ -18,7 +18,7 @@ Optional module to visualize an AC-PC transformed CT scan using AC/PC prediction
 - 
 ### Fine Localization
 Our 3D-UNet models was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
-CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache; Cores: 10 Cores / 20 Threads; Memory: 32GB
+CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache; Cores: 10 Cores / 20 Threads; Memory: 32GB; GPU: NVIDIA GeForce RTX 3080 (10GB)
 
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
