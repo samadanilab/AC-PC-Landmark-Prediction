@@ -7,11 +7,14 @@ As this framework was originally developed using data from the Dept. of Veterans
 ## Data Requirements
 
 ## System and Add-on Requirements
-The coarse-localization guide for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (https://github.com/Slicer/SlicerJupyter). The jupyter notebook with our code is provided in this repo, with a 'preprocessing_README' that contains specific instructions for image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer are required: 
-1. SlicerJupyter
-2. SlicerNeuro 
+The coarse-localization step for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (). See 'preprocessing_README' for specific instructions for image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer, which can be downloaded from 3D-Slicer (View > Extensions Manager) are required: 
+1. SlicerJupyter (https://github.com/Slicer/SlicerJupyter)
+2. SlicerElastix (https://github.com/lassoan/SlicerElastix)
 
-Our framework was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
+Optional module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework:
+- SlicerNeuro (https://github.com/Slicer/SlicerNeuro). Note that the following modules, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually: . 
+
+Our 3D-UNet models was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
 CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache; Cores: 10 Cores / 20 Threads; Memory: 32GB
 
 ## Schematic of the Registration-guided 3D-UNet Framework
