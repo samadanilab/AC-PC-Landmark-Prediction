@@ -7,7 +7,7 @@ As this framework was originally developed using data from the Dept. of Veterans
 ## Data Requirements
 
 ## System and Add-on Requirements
-Our framework was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:
+Our framework was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications: \n
 CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache; Cores: 20; Memory: 32GB
 
 ## Schematic of the Registration-guided 3D-UNet Framework
