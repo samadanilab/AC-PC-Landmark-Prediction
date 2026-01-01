@@ -7,9 +7,10 @@ As this framework was originally developed using data from the Dept. of Veterans
 ## Data Requirements
 
 ## System and Add-on Requirements
-The coarse-localization step for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (). See 'preprocessing_README' for specific instructions for image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer, which can be downloaded from 3D-Slicer (View > Extensions Manager) are required: 
+The coarse-localization step for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (). See 'preprocessing_README' for details on image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer, which can be downloaded from 3D-Slicer (View > Extensions Manager) are required: 
 1. SlicerJupyter (https://github.com/Slicer/SlicerJupyter)
 2. SlicerElastix (https://github.com/lassoan/SlicerElastix)
+3. SurfaceWrapSolidify (https://github.com/sebastianandress/Slicer-SurfaceWrapSolidify)
 
 Optional module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework:
 - SlicerNeuro (https://github.com/Slicer/SlicerNeuro). Note that the following modules, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually: . 
