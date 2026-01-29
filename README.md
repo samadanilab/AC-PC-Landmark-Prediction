@@ -2,7 +2,7 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Patent Pending](https://img.shields.io/badge/Status-Patent%20Pending-blue)
-> **⚠️ Important Legal Notice:** This software is **Patent Pending** (US App. No. 18/534,822) and is strictly for **Non-Commercial Academic Use**. See the [License & Patent Notice](#license--patent-notice) section below for details.
+> This software is **Patent Pending** (US App. No. 18/534,822) and is strictly for **Non-Commercial Academic Use**. See the [License & Patent Notice](#license--patent-notice) section below for details.
 
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. 
 
