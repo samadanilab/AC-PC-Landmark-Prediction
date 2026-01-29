@@ -1,4 +1,9 @@
 # Registration-guided 3D-UNets for AC-PC Landmark Prediction on CT
+
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+![Patent Pending](https://img.shields.io/badge/Status-Patent%20Pending-blue)
+> **⚠️ Important Legal Notice:** This software is **Patent Pending** (US App. No. 18/534,822) and is strictly for **Non-Commercial Academic Use**. See the [License & Patent Notice](#license--patent-notice) section below for details.
+
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. 
 
 ## Model Availability Disclaimer
@@ -34,3 +39,16 @@ Coarse landmarks inferred via image registration (coarse localization), guide se
 ## Illustration of AC-PC landmark prediction on a sample CT scan 
 Figure 1 shows an example of AC-PC prediction on sample CT scans of a patient with Normal Pressure Hydrocephalus (NPH) and a normal patient. N 
 
+
+## License & Patent Notice
+
+**Copyright:**
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**. 
+
+**Patents:**
+The methods and algorithms implemented in this software are the subject of **US Patent Application No. 18/534,822**. 
+
+Commercial use of this software, or the methods described herein, is strictly prohibited without a separate commercial license. For commercial licensing inquiries, please contact: uzma@samadani.com.
+
+**Third-Party Components:**
+This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See `model.py` for details.
