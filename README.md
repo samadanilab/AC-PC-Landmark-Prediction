@@ -1,8 +1,4 @@
-<style>
-  body {
-    text-align: justify;
-  }
-</style>
+<div align="justify">
 
 # Registration-guided 3D-UNets for AC-PC Landmark Prediction on CT
 
@@ -60,6 +56,7 @@ This project is licensed under the **Creative Commons Attribution-NonCommercial-
 **Patents:**
 The methods and algorithms implemented in this software are the subject of **US Patent Application No. 18/534,822**. 
 
+</div>
 Commercial use of this software, or the methods described herein, is strictly prohibited without a separate commercial license. For commercial licensing inquiries, please contact: uzma@samadani.com.
 
 **Third-Party Components:**
