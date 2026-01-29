@@ -23,7 +23,7 @@ The coarse-localization step for our framework was run fully within 3D Slicer us
 2. SlicerElastix (https://github.com/lassoan/SlicerElastix)
 3. SurfaceWrapSolidify (https://github.com/sebastianandress/Slicer-SurfaceWrapSolidify)
 
-SlicerNeuro (https://github.com/Slicer/SlicerNeuro) offers the "ACPC Transform" module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework. Note that the .... modules, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually. 
+SlicerNeuro (https://github.com/Slicer/SlicerNeuro) offers the "ACPC Transform" module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework. Note that certain modules like the <SwissSkullStripper>, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually. We will provide a jupyter notebook for visualizing post AC-PC aligned scans shortly. 
  
 ### Fine Localization
 Our 3D-UNet models was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
