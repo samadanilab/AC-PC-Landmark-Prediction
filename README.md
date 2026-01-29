@@ -1,3 +1,9 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
+
 # Registration-guided 3D-UNets for AC-PC Landmark Prediction on CT
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
