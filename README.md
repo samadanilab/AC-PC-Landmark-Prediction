@@ -30,7 +30,7 @@ Cores: 10 Cores / 20 Threads\
 Memory: 32GB\
 GPU: NVIDIA GeForce RTX 3080 (10GB VRAM)
 
-*Note on keeping training times reasonable with large-scale image data: The registration-guided 3D-UNets require 2-channel (for the two landmarks: AC and PC) 3D-patches of image data as input and 6-channel 3D-patches of ground-truth heatmaps (2 landmarks \times 3 channels: AC, PC, background) for supervised training. Our experience with assembling the inputs and outputs on the fly with dataloaders resulted in very long training times, where multiple model versions have to be evaluated for hyperparameter tuning. Therefore, we assemble intermediately processed data which is first fully read into CPU memory. During training, batches of data were fully processed and moved into GPU memory.* 
+*Note on keeping training times reasonable with large-scale image data: The registration-guided 3D-UNets require 2-channel (for the two landmarks: AC and PC) 3D-patches of image data as input and 6-channel 3D-patches of ground-truth heatmaps (2 landmarks x 3 channels \[AC, PC, background] = 6 operational channels) for supervised training. Our experience with assembling the inputs and outputs on the fly with dataloaders resulted in very long training times, where multiple model versions have to be evaluated for hyperparameter tuning. Therefore, we assemble intermediately processed data which is first fully read into CPU memory. During training, batches of data were fully processed and moved into GPU memory.* 
 
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
