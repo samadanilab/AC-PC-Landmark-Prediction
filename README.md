@@ -39,6 +39,12 @@ Coarse landmarks inferred via image registration (coarse localization), guide se
 ## Illustration of AC-PC landmark prediction on a sample CT scan 
 Figure 1 shows an example of AC-PC prediction on sample CT scans of a patient with Normal Pressure Hydrocephalus (NPH) and a normal patient. N 
 
+## Acknowledgments
+
+This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. 
+
+If you use this code for your research, please consider citing the following (in addition to our paper):
+* **3D Slicer:** Fedorov A., Beichel R., Kalpathy-Cramer J., et al. "3D Slicer as an image computing platform for the Quantitative Imaging Network." *Magnetic Resonance Imaging*. 2012 Nov;30(9):1323-41.
 
 ## License & Patent Notice
 
