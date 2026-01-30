@@ -22,17 +22,15 @@ The coarse-localization step for our framework was run fully within 3D Slicer us
 1. [SlicerJupyter](https://github.com/Slicer/SlicerJupyter)
 2. [SlicerElastix](https://github.com/lassoan/SlicerElastix)
 3. [SurfaceWrapSolidify](https://github.com/sebastianandress/Slicer-SurfaceWrapSolidify)
-
-[SlicerNeuro](https://github.com/Slicer/SlicerNeuro) offers the "ACPC Transform" module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework. Note that certain modules like the <SwissSkullStripper>, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually. We will provide a jupyter notebook for visualizing post AC-PC aligned scans shortly. 
  
 ### Fine Localization
-Our 3D-UNet models was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
+Our 3D-UNet models were trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
 CPU: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz 20M Cache\
 Cores: 10 Cores / 20 Threads\
 Memory: 32GB\
 GPU: NVIDIA GeForce RTX 3080 (10GB VRAM)
 
-*Note on keeping training times reasonable with large-scale image data: The registration-guided 3D-UNets require 2-channel (for the two landmarks: AC and PC) 3D-patches of image data as input and 6-channel 3D-patches of ground-truth heatmaps (2 landmarks x 3 channels \[AC, PC, background] = 6 operational channels) for supervised training. Our experience with assembling the inputs and outputs on the fly with dataloaders resulted in very long training times, where multiple model versions have to be evaluated for hyperparameter tuning. Therefore, we assemble intermediately processed data which is first fully read into CPU memory. During training, batches of data were fully processed and moved into GPU memory.* 
+Note on keeping training times reasonable with large-scale image data: The registration-guided 3D-UNets require 2-channel (for the two landmarks: AC and PC) 3D-patches of image data as input and 6-channel 3D-patches of ground-truth heatmaps (2 landmarks x 3 channels \[AC, PC, background] = 6 operational channels) for supervised training. Our experience with assembling the inputs and outputs on the fly with dataloaders resulted in very long training times, where multiple model versions have to be evaluated for hyperparameter tuning. Therefore, we assemble intermediately processed data which is first fully read into CPU memory. See [Preprocessing_3DUNet](Preprocessing_3DUNet.ipynb) for the implementation of this preprocessing. During training, batches of data were fully processed and moved into GPU memory. 
 
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
@@ -44,7 +42,7 @@ Figure 2. Visualization of AC-PC prediction on a representative head CT scan obt
 
 ## Acknowledgments
 
-This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please consider citing the following (in addition to our paper):
+This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please consider citing the following:
 * **3D Slicer:** Fedorov A., Beichel R., Kalpathy-Cramer J., et al. "3D Slicer as an image computing platform for the Quantitative Imaging Network." *Magnetic Resonance Imaging*. 2012 Nov;30(9):1323-41.
 
 ## License & Patent Notice
@@ -61,6 +59,6 @@ Commercial use of this software, or the methods described herein, is strictly pr
 This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See [model.py](model.py) for details.
 
 **References**
-[1] Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
+1. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
 
 </div>
