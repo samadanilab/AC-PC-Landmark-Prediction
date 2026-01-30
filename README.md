@@ -36,11 +36,11 @@ GPU: NVIDIA GeForce RTX 3080 (10GB VRAM)
 
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
-Coarse landmarks inferred via image registration (coarse localization), guide selection of image patches which are input to the 3D-UNet to perform heatmap regression around the true AC and PC landmarks, along with a background heatmap. Patch and channel specific predictions are unstacked and normalized, followed by derivation of AC-PC predictions (fine localization) as the mean location of active voxels in the regressed heatmaps. AC = Anterior Commissure, PC = Posterior-Commissure, BG = Background, ps = patch-size, BN = Batch-Normalization, ReLU = Rectified Linear Unit. Note that processing is in 3D, and 2D input slices and heatmaps are indicated for demonstration purposes. 
+Figure 1. Overview of the AC-PC Localization Methodology. Coarse landmarks inferred via image registration (coarse localization), guide selection of image patches which are input to the 3D-UNet to perform heatmap regression around the true AC and PC landmarks, along with a background heatmap. Patch and channel specific predictions are unstacked and normalized, followed by derivation of AC-PC predictions (fine localization) as the mean location of active voxels in the regressed heatmaps. AC = Anterior Commissure, PC = Posterior-Commissure, BG = Background, ps = patch-size, BN = Batch-Normalization, ReLU = Rectified Linear Unit. Note that processing is in 3D, and 2D input slices and heatmaps are indicated for demonstration purposes. 
 
 ## Illustration of AC-PC landmark prediction on a sample CT scan 
 ![AC-PC Illustration](assets/CQ500_CT_185.jpg)
-Figure 1 shows an example of AC-PC prediction on sample CT scan acquired from the open source CQ-500 dataset. Note that this scan is used only for demonstration of the reference standard, coarse, and fine-localized AC-PC landmarks, and is not part of the train/test/validation datasets used in our paper. 
+Figure 2. Visualization of AC-PC prediction on a representative head CT scan obtained from the public CQ500 dataset [1]. This scan was selected based on the accompanying radiology reports indicating no intracranial abnormalities, serving here as a representative example of normal anatomy. Note: This volume is used solely for illustrative purposes to demonstrate the reference standard alongside coarse and fine-localized predictions; it was not included in the training, validation, or testing cohorts used in this study.
 
 ## Acknowledgments
 
@@ -62,3 +62,6 @@ Commercial use of this software, or the methods described herein, is strictly pr
 
 **Third-Party Components:**
 This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See `model.py` for details.
+
+**References**
+[1] Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
