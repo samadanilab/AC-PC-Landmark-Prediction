@@ -18,12 +18,12 @@ The AC-PC reference standard that we used as ground-truth to train our models we
 
 ## System and Add-on Requirements
 ### Coarse Localization
-The coarse-localization step for our framework was run fully within 3D Slicer using a Jupyter Notebook interface (). See 'preprocessing_README' for details on image preprocessing. We used 3D Slicer version 5.6.2 (https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer, which can be downloaded from 3D-Slicer (View > Extensions Manager) are required: 
-1. SlicerJupyter (https://github.com/Slicer/SlicerJupyter)
-2. SlicerElastix (https://github.com/lassoan/SlicerElastix)
-3. SurfaceWrapSolidify (https://github.com/sebastianandress/Slicer-SurfaceWrapSolidify)
+The coarse-localization step for our framework was run fully within 3D Slicer using a Jupyter Notebook interface, which can be found in [CoarseLocalizationSlicer.ipynb](./CoarseLocalizationSlicer.ipynb). We used [3D Slicer version 5.6.2](https://download.slicer.org/?version=5.6.2). The following extensions to 3D Slicer, which can be downloaded from 3D-Slicer (View > Extensions Manager) are required: 
+1. [SlicerJupyter](https://github.com/Slicer/SlicerJupyter)
+2. [SlicerElastix](https://github.com/lassoan/SlicerElastix)
+3. [SurfaceWrapSolidify](https://github.com/sebastianandress/Slicer-SurfaceWrapSolidify)
 
-SlicerNeuro (https://github.com/Slicer/SlicerNeuro) offers the "ACPC Transform" module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework. Note that certain modules like the <SwissSkullStripper>, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually. We will provide a jupyter notebook for visualizing post AC-PC aligned scans shortly. 
+[SlicerNeuro](https://github.com/Slicer/SlicerNeuro) offers the "ACPC Transform" module to visualize an AC-PC transformed CT scan using AC/PC predictions from our framework. Note that certain modules like the <SwissSkullStripper>, which get automatically installed with SlicerNeuro may interfere with the workflow if they are not removed manually. We will provide a jupyter notebook for visualizing post AC-PC aligned scans shortly. 
  
 ### Fine Localization
 Our 3D-UNet models was trained with data of scale described above on a Linux machine (Ubuntu 24.04.3 LTS) with the following specifications:\
@@ -44,9 +44,7 @@ Figure 2. Visualization of AC-PC prediction on a representative head CT scan obt
 
 ## Acknowledgments
 
-This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. 
-
-If you use this code for your research, please consider citing the following (in addition to our paper):
+This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please consider citing the following (in addition to our paper):
 * **3D Slicer:** Fedorov A., Beichel R., Kalpathy-Cramer J., et al. "3D Slicer as an image computing platform for the Quantitative Imaging Network." *Magnetic Resonance Imaging*. 2012 Nov;30(9):1323-41.
 
 ## License & Patent Notice
@@ -57,11 +55,12 @@ This project is licensed under the **Creative Commons Attribution-NonCommercial-
 **Patents:**
 The methods and algorithms implemented in this software are the subject of **US Patent Application No. 18/534,822**. 
 
-</div>
 Commercial use of this software, or the methods described herein, is strictly prohibited without a separate commercial license. For commercial licensing inquiries, please contact: uzma@samadani.com.
 
 **Third-Party Components:**
-This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See `model.py` for details.
+This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See [model.py](model.py) for details.
 
 **References**
 [1] Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
+
+</div>
