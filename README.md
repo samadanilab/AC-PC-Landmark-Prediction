@@ -43,7 +43,7 @@ Figure 1. Overview of the AC-PC Localization Methodology. Coarse landmarks infer
 Figure 2. Visualization of AC-PC prediction on a representative head CT scan obtained from the public CQ500 dataset [3]. This 5-mm CT scan was selected based on the accompanying radiology reports indicating no intracranial abnormalities, serving here as a representative example of normal anatomy. The coarse AC-PC landmarks derived via image registration (in *yellow*), manually annotated reference standard landmarks (in *yellow*), and fine localized landmarks from the registration-guided 3D-UNet (in *green*) are shown. Overall AC/PC localization error (mean radial distance between the fine localized and reference standard landmarks) were 1.7/1.25 mm. Note: This volume is used solely for illustrative purposes to demonstrate the reference standard alongside coarse and fine-localized predictions; it was not included in the training, validation, or testing cohorts used in this study. The CQ500 scan is displayed here for demonstration because the clinical datasets used in this study are restricted from public display due to institutional privacy regulations.
 
 ## Repository Structure
-Note that while we provide code for developing this framework on axial reformats, as they are ubiquotously acquired, they can be readily adapted for coronal and sagittal reformats. 
+Note that while we provide code for developing this framework on axial reformats, as they are ubiquitously acquired, they can be readily adapted for coronal and sagittal reformats. 
 ### Code Organization
 | File | Description |
 | :--- | :--- |
