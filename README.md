@@ -39,7 +39,8 @@ GPU: NVIDIA GeForce RTX 3080 (10GB VRAM)
 Coarse landmarks inferred via image registration (coarse localization), guide selection of image patches which are input to the 3D-UNet to perform heatmap regression around the true AC and PC landmarks, along with a background heatmap. Patch and channel specific predictions are unstacked and normalized, followed by derivation of AC-PC predictions (fine localization) as the mean location of active voxels in the regressed heatmaps. AC = Anterior Commissure, PC = Posterior-Commissure, BG = Background, ps = patch-size, BN = Batch-Normalization, ReLU = Rectified Linear Unit. Note that processing is in 3D, and 2D input slices and heatmaps are indicated for demonstration purposes. 
 
 ## Illustration of AC-PC landmark prediction on a sample CT scan 
-Figure 1 shows an example of AC-PC prediction on sample CT scans of a patient with Normal Pressure Hydrocephalus (NPH) and a normal patient. N 
+![AC-PC Illustration](assets/CQ500_CT_185.jpg)
+Figure 1 shows an example of AC-PC prediction on sample CT scan acquired from the open source CQ-500 dataset. Note that this scan is used only for demonstration of the reference standard, coarse, and fine-localized AC-PC landmarks, and is not part of the train/test/validation datasets used in our paper. 
 
 ## Acknowledgments
 
