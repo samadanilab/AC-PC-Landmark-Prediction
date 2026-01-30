@@ -9,7 +9,7 @@
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. 
 
 ## Project Status & Documentation
-> **🚧 Note:** We are currently in the process of cleaning up code comments and expanding inline documentation. While the core logic is functional and matches the manuscript, you may encounter sparse docstrings in some helper functions. We will be updating the repository regularly over the coming weeks.
+> **🚧 Note:** We are currently in the process of cleaning up code comments and expanding inline documentation. While the core logic is functional, you may encounter sparse docstrings in some helper functions. We will be updating the repository regularly over the coming weeks.
 
 ## Model Availability Disclaimer
 As this framework was originally developed using data from the Dept. of Veterans Affairs (VA), we are unable to publicly release the model weights trained on internal VA head CT scans due to patient privacy regulations and data security policies. However, we provide the complete source code and a detailed step-by-step tutorial to enable researchers to train the model using their own datasets.
@@ -51,13 +51,13 @@ Note that while we provide code for developing this framework on axial reformats
 | `CoarseLocalizationSlicer.ipynb` | Notebook implementing the coarse localization step |
 | `Preprocessing_3DUNet.ipynb` | Notebook implementing all preprocessing necessary for training and testing the 3D-UNet for fine localization|
 | `data_utils.py` | PyTorch Datasets and Dataloaders for AC-PC landmark localization on head CT data |
-| `model.py` | Contains the 3D UNet architecture (adapted from Wolny et al.) |
-| `loss.py` | Custom loss functions used during training |
+| `model.py` | Contains the 3D UNet architecture (adapted from Wolny et al. [4]) |
+| `loss.py` | Custom loss function used during training |
 | `train_hptune_test.py` | Python file for hyper-parameter tuning using nested cross validation |
 | `trainWaug_test.py` | Python file for training models at different augmentation scales, after fixing hyperparameters from the previous step |
 
 ### Data Setup
-Because medical images are large and private, **this repository does not contain data** except for the CT-template reproduced from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [4]. You must create the following folder structure locally and populate it with your own files to run the code.
+**This repository does not contain head CT data** except for the CT-template reproduced from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [5]. You must create the following folder structure locally and populate it with your own files to run the code.
 
 1. Create the following folders in the root directory, and structure them as follows:
 ```text
@@ -102,7 +102,7 @@ AC-PC-Prediction/
 
 ## Acknowledgments
 
-This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please consider citing 3D Slicer in your work [].
+This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please consider citing 3D Slicer in your work [2].
 
 ## License & Patent Notice
 
@@ -119,8 +119,9 @@ This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, use
 
 **References**
 1. Choi SH, Chi JG, Kim YB, Cho ZH. Anterior commissure--posterior commissure revisited. Korean J Radiol. 2013 Jul-Aug;14(4):653-61. doi: 10.3348/kjr.2013.14.4.653. Epub 2013 Jul 17. PMID: 23901324; PMCID: PMC3725361.
-2. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
-3. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, Bauer C, Jennings D, Fennessy F, Sonka M, Buatti J, Aylward S, Miller JV, Pieper S, Kikinis R. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012 Nov;30(9):1323-41. doi: 10.1016/j.mri.2012.05.001. Epub 2012 Jul 6. PMID: 22770690; PMCID: PMC3466397.
-4. Rajashekar D, Wilms M, MacDonald ME, Ehrhardt J, Mouches P, Frayne R, Hill MD, Forkert ND. High-resolution T2-FLAIR and non-contrast CT brain atlas of the elderly. Sci Data. 2020 Feb 17;7(1):56. doi: 10.1038/s41597-020-0379-9. PMID: 32066734; PMCID: PMC7026039.
+2. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, Bauer C, Jennings D, Fennessy F, Sonka M, Buatti J, Aylward S, Miller JV, Pieper S, Kikinis R. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012 Nov;30(9):1323-41. doi: 10.1016/j.mri.2012.05.001. Epub 2012 Jul 6. PMID: 22770690; PMCID: PMC3466397.
+3. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
+4. Wolny A, Cerrone L, Vijayan A, Tofanelli R, Barro AV, Louveaux M, Wenzl C, Strauss S, Wilson-Sánchez D, Lymbouridou R, Steigleder SS, Pape C, Bailoni A, Duran-Nebreda S, Bassel GW, Lohmann JU, Tsiantis M, Hamprecht FA, Schneitz K, Maizel A, Kreshuk A. Accurate and versatile 3D segmentation of plant tissues at cellular resolution. Elife. 2020 Jul 29;9:e57613. doi: 10.7554/eLife.57613. PMID: 32723478; PMCID: PMC7447435.
+5. Rajashekar D, Wilms M, MacDonald ME, Ehrhardt J, Mouches P, Frayne R, Hill MD, Forkert ND. High-resolution T2-FLAIR and non-contrast CT brain atlas of the elderly. Sci Data. 2020 Feb 17;7(1):56. doi: 10.1038/s41597-020-0379-9. PMID: 32066734; PMCID: PMC7026039.
 
 </div>
