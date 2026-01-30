@@ -59,7 +59,7 @@ Note that while we provide code for developing this framework on axial reformats
 ### Data Setup
 **This repository does not contain head CT data** except for the CT-template reproduced from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [5]. You must create the following folder structure locally and populate it with your own files to run the code.
 
-1. Create the following folders in the root directory, and structure them as follows:
+Create the following folders in the root directory, and structure them as follows:
 ```text
 AC-PC-Prediction/
 ├── raw_data/                     # INPUT: Place your .nii scans here
@@ -109,12 +109,12 @@ This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessi
 **Copyright:**
 This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**. 
 
-**Patents:**
+**Patent:**
 The methods and algorithms implemented in this software are the subject of **US Patent Application No. 18/534,822**. 
 
 Commercial use of this software, or the methods described herein, is strictly prohibited without a separate commercial license. For commercial licensing inquiries, please contact: uzma@samadani.com.
 
-**Third-Party Components:**
+**Third-Party Component:**
 This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See [model.py](model.py) for details.
 
 **References**
