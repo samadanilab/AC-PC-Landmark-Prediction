@@ -8,8 +8,8 @@
 
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. 
 
-## Project Status & Documentation
-> **🚧 Note:** We are currently in the process of cleaning up code comments and expanding inline documentation. While the core logic is functional, you may encounter sparse docstrings in some helper functions. We will be updating the repository regularly over the coming weeks.
+## Code Status
+> **Note:** This repository is a snapshot of the code used to generate the results for the axial reformat-specific AC-PC localization presented in the manuscript. While the core logic is fully functional and reproducible, the codebase is currently being refactored and documented for the final public release.
 
 ## Model Availability Disclaimer
 As this framework was originally developed using data from the Dept. of Veterans Affairs (VA), we are unable to publicly release the model weights trained on internal VA head CT scans due to patient privacy regulations and data security policies. However, we provide the complete source code and a detailed step-by-step tutorial to enable researchers to train the model using their own datasets.
