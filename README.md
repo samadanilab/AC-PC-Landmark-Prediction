@@ -52,13 +52,13 @@ Note that while we provide code for developing this framework on axial reformats
 | `CoarseLocalizationSlicer.ipynb` | Notebook implementing the coarse localization step |
 | `Preprocessing_3DUNet.ipynb` | Notebook implementing all preprocessing necessary for training and testing the 3D-UNet for fine localization|
 | `data_utils.py` | PyTorch Datasets and Dataloaders for AC-PC landmark localization on head CT data |
-| `model.py` | Contains the 3D UNet architecture (adapted from Wolny et al. [4]) |
+| `model.py` | Contains the 3D UNet architecture (adapted from Wolny et al. [3]) |
 | `loss.py` | Custom loss function used during training |
 | `train_hptune_test.py` | Python file for hyper-parameter tuning using nested cross validation |
 | `trainWaug_test.py` | Python file for training models at different augmentation scales, after fixing hyperparameters from the previous step |
 
 ### Data Setup
-**This repository does not contain head CT data** Download the CT-template files (both the volume and MNI warping transformation) from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [5] and place it in the 'ct_template' folder. Populate the 'raw_data' folder with your raw head CT data, and add your reference-standard annotations (csv) in the 'acpc_annotations' folder. The other folders will be populated by the scripts provided. 
+**This repository does not contain head CT data** Download the CT-template files (both the volume and MNI warping transformation) from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [4] and place it in the 'ct_template' folder. Populate the 'raw_data' folder with your raw head CT data, and add your reference-standard annotations (csv) in the 'acpc_annotations' folder. The other folders will be populated by the scripts provided. 
 
 If you download or clone the repo, the following folder structure will be created in the root directory:
 ```text
@@ -121,6 +121,9 @@ AC-PC-Prediction/
     ├── ...
     └── AugmentedTimes20/          
 ``` 
+## Citation
+If you find this code useful, please cite our work:
+Kadaba Sridhar S, Kuang R, Eastman A, Wilson P, Shubhendu M, Broadbent C, Truwit C, Samadani U. “AI-Enabled Automatic and Precise AC-PC Localization on CT Using Registration-Guided 3D-UNets”. Under Review (2026).
 
 ## Acknowledgments
 
@@ -142,8 +145,8 @@ This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, use
 **References**
 1. Choi SH, Chi JG, Kim YB, Cho ZH. Anterior commissure--posterior commissure revisited. Korean J Radiol. 2013 Jul-Aug;14(4):653-61. doi: 10.3348/kjr.2013.14.4.653. Epub 2013 Jul 17. PMID: 23901324; PMCID: PMC3725361.
 2. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, Bauer C, Jennings D, Fennessy F, Sonka M, Buatti J, Aylward S, Miller JV, Pieper S, Kikinis R. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012 Nov;30(9):1323-41. doi: 10.1016/j.mri.2012.05.001. Epub 2012 Jul 6. PMID: 22770690; PMCID: PMC3466397.
-3. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).
-4. Wolny A, Cerrone L, Vijayan A, Tofanelli R, Barro AV, Louveaux M, Wenzl C, Strauss S, Wilson-Sánchez D, Lymbouridou R, Steigleder SS, Pape C, Bailoni A, Duran-Nebreda S, Bassel GW, Lohmann JU, Tsiantis M, Hamprecht FA, Schneitz K, Maizel A, Kreshuk A. Accurate and versatile 3D segmentation of plant tissues at cellular resolution. Elife. 2020 Jul 29;9:e57613. doi: 10.7554/eLife.57613. PMID: 32723478; PMCID: PMC7447435.
-5. Rajashekar D, Wilms M, MacDonald ME, Ehrhardt J, Mouches P, Frayne R, Hill MD, Forkert ND. High-resolution T2-FLAIR and non-contrast CT brain atlas of the elderly. Sci Data. 2020 Feb 17;7(1):56. doi: 10.1038/s41597-020-0379-9. PMID: 32066734; PMCID: PMC7026039.
+!< -- 3. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018). -->
+3. Wolny A, Cerrone L, Vijayan A, Tofanelli R, Barro AV, Louveaux M, Wenzl C, Strauss S, Wilson-Sánchez D, Lymbouridou R, Steigleder SS, Pape C, Bailoni A, Duran-Nebreda S, Bassel GW, Lohmann JU, Tsiantis M, Hamprecht FA, Schneitz K, Maizel A, Kreshuk A. Accurate and versatile 3D segmentation of plant tissues at cellular resolution. Elife. 2020 Jul 29;9:e57613. doi: 10.7554/eLife.57613. PMID: 32723478; PMCID: PMC7447435.
+4. Rajashekar D, Wilms M, MacDonald ME, Ehrhardt J, Mouches P, Frayne R, Hill MD, Forkert ND. High-resolution T2-FLAIR and non-contrast CT brain atlas of the elderly. Sci Data. 2020 Feb 17;7(1):56. doi: 10.1038/s41597-020-0379-9. PMID: 32066734; PMCID: PMC7026039.
 
 </div>
