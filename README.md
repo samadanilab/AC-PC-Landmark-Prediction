@@ -60,7 +60,7 @@ Note that while we provide code for developing this framework on axial reformats
 ### Data Setup
 **This repository does not contain head CT data** Download the CT-template files (both the volume and MNI warping transformation) from [Rajashekhar et al., 2020](https://www.nature.com/articles/s41597-020-0379-9) [4] and place it in the 'ct_template' folder. Populate the 'raw_data' folder with your raw head CT data, and add your reference-standard annotations (csv) in the 'acpc_annotations' folder. The other folders will be populated by the scripts provided. 
 
-If you download or clone the repo, the following folder structure will be created in the root directory:
+If you download or clone the repo, the following folder structure will be created in the root directory. Note that this assumes one scan per patient, so modify your folder structure if you have > 1 scan per patient. 
 ```text
 AC-PC-Prediction/
 ├── raw_data/                                        # INPUT: Place your .nii scans here
