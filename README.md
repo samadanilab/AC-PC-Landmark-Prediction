@@ -145,7 +145,6 @@ This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, use
 **References**
 1. Choi SH, Chi JG, Kim YB, Cho ZH. Anterior commissure--posterior commissure revisited. Korean J Radiol. 2013 Jul-Aug;14(4):653-61. doi: 10.3348/kjr.2013.14.4.653. Epub 2013 Jul 17. PMID: 23901324; PMCID: PMC3725361.
 2. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, Bauer C, Jennings D, Fennessy F, Sonka M, Buatti J, Aylward S, Miller JV, Pieper S, Kikinis R. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012 Nov;30(9):1323-41. doi: 10.1016/j.mri.2012.05.001. Epub 2012 Jul 6. PMID: 22770690; PMCID: PMC3466397.
-<!-- 3. Chilamkurthy, S., Ghosh, R., Tanamala, S., et al. "Deep learning algorithms for detection of critical findings in head CT scans." arXiv preprint arXiv:1803.05854 (2018).-->
 3. Wolny A, Cerrone L, Vijayan A, Tofanelli R, Barro AV, Louveaux M, Wenzl C, Strauss S, Wilson-Sánchez D, Lymbouridou R, Steigleder SS, Pape C, Bailoni A, Duran-Nebreda S, Bassel GW, Lohmann JU, Tsiantis M, Hamprecht FA, Schneitz K, Maizel A, Kreshuk A. Accurate and versatile 3D segmentation of plant tissues at cellular resolution. Elife. 2020 Jul 29;9:e57613. doi: 10.7554/eLife.57613. PMID: 32723478; PMCID: PMC7447435.
 4. Rajashekar D, Wilms M, MacDonald ME, Ehrhardt J, Mouches P, Frayne R, Hill MD, Forkert ND. High-resolution T2-FLAIR and non-contrast CT brain atlas of the elderly. Sci Data. 2020 Feb 17;7(1):56. doi: 10.1038/s41597-020-0379-9. PMID: 32066734; PMCID: PMC7026039.
 
