@@ -2,10 +2,6 @@
 
 # AI-Enabled Automatic and Precise AC-PC Localization on CT Using Registration-Guided 3D-UNets
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-![Patent Pending](https://img.shields.io/badge/Status-Patent%20Pending-blue)
-> This software is **Patent Pending** (US App. No. 18/534,822) and is strictly for **Non-Commercial Academic Use**. See the [License & Patent Notice](#license--patent-notice) section below for details.
-
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. 
 
 **Note:** This repository is a snapshot of the code used to generate the results for the axial reformat-specific AC-PC localization presented in the manuscript. While the core logic is fully functional and reproducible, the codebase is currently being refactored and documented for the final public release.
@@ -129,15 +125,9 @@ Kadaba Sridhar S, Kuang R, Eastman A, Wilson P, Shubhendu M, Broadbent C, Truwit
 
 This work utilized **3D Slicer** (https://www.slicer.org/) for image preprocessing and obtaining coarse localized AC-PC landmarks via image registration. If you use this code for your research, please also cite 3D Slicer in your work [2].
 
-## License & Patent Notice
+## License
 
-**Copyright:**
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**. 
-
-**Patent:**
-The methods and algorithms implemented in this software are the subject of **US Patent Application No. 18/534,822**. 
-
-Commercial use of this software, or the methods described herein, is strictly prohibited without a separate commercial license. For commercial licensing inquiries, please contact: uzma@samadani.com.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 **Third-Party Component:**
 This repository contains code adapted from *pytorch-3dunet* by Adrian Wolny, used under the MIT License. See [model.py](model.py) for details.
