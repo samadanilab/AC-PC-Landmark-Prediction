@@ -117,7 +117,7 @@ AC-PC-Prediction/
 ``` 
 ## Citation
 If you find this code useful, please cite our work:
-Kadaba Sridhar S, Kuang R, Eastman A, Wilson P, Shubhendu M, Broadbent C, Truwit C, Samadani U. “AI-Enabled Automatic and Precise AC-PC Localization on CT Using Registration-Guided 3D-UNets”. Under Review (2026).
+Kadaba Sridhar S, Kuang R, Eastman A, Wilson P, Shubhendu M, Broadbent C, Truwit C, Samadani U. “Automatic Coarse-to-Fine AC-PC Localization on CT Using Registration Guided 3D-UNets”. Under Review (2026).
 
 ## Acknowledgments
 
