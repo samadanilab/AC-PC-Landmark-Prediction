@@ -1,6 +1,6 @@
 <div align="justify">
 
-# AI-Enabled Automatic and Precise AC-PC Localization on CT Using Registration-Guided 3D-UNets
+# Automatic Coarse-to-Fine AC-PC Localization on CT Using Registration Guided 3D-UNets
 
 This repository provides code to develop and evaluate a framework of image registration informed 3D-UNets to automatically localize the Anterior (AC) and Posterior Commissure (PC) landmarks on non-contrast Computed Tomography (CT) scans. While the codebase is for axial reformats, it can be readily extended to coronal and sagittal reformat-based localization. 
 
