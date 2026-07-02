@@ -28,6 +28,16 @@ GPU: NVIDIA GeForce RTX 3080 (10GB VRAM)
 
 *Note on keeping training times reasonable with large-scale image data*: The registration-guided 3D-UNets require 2-channel (for the two landmarks: AC and PC) 3D-patches of image data as input and 6-channel 3D-patches of ground-truth heatmaps (2 landmarks x 3 channels \[AC, PC, background] = 6 operational channels) for supervised training. Our experience with assembling the inputs and outputs on the fly with dataloaders resulted in very long training times, where multiple model versions have to be evaluated for hyperparameter tuning. Therefore, we assemble intermediately processed data which is first fully read into CPU memory. See [Preprocessing_3DUNet](Preprocessing_3DUNet.ipynb) for the implementation of this preprocessing. During training, batches of data were fully processed and moved into GPU memory. 
 
+### Environment Setup
+This repository contains the codebase for model training. To help you hit the ground running and avoid dependency conflicts, we have provided the exact Conda environment used during our development in the `3dunet_env.yml` file. 
+
+You can easily recreate and activate this environment to facilitate your work using the following commands:
+
+```bash
+
+conda env create -f 3dunet_env.yml # Create the environment from the configuration file
+conda activate env_name # Activate the environment (replace 'env_name' with the name defined at the top of your yml file)
+
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
 Figure 1. Overview of the AC-PC Localization Methodology. Coarse landmarks inferred via image registration (coarse localization), guide selection of image patches which are input to the 3D-UNet to perform heatmap regression around the true AC and PC landmarks, along with a background heatmap. Patch and channel specific predictions are unstacked and normalized, followed by derivation of AC-PC predictions (fine localization) as the mean location of active voxels in the regressed heatmaps. AC = Anterior Commissure, PC = Posterior-Commissure, BG = Background, ps = patch-size, BN = Batch-Normalization, ReLU = Rectified Linear Unit. Note that processing is in 3D, and 2D input slices and heatmaps are indicated for demonstration purposes. 
