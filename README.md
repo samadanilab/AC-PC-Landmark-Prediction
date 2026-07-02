@@ -33,8 +33,8 @@ This repository contains the codebase for model training. To help you hit the gr
 
 You can easily recreate and activate this environment to facilitate your work using the following commands:
 
-conda env create -f 3dunet_env.yml # Create the environment from the configuration file
-conda activate env_name # Activate the environment (replace 'env_name' with the name defined at the top of your yml file)
+conda env create -f 3dunet_env.yml 
+conda activate env_name 
 
 ## Schematic of the Registration-guided 3D-UNet Framework
 ![System Architecture Diagram](assets/Registration-guided-3D-UNet-Framework.jpg)
